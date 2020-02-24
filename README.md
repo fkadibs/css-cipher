@@ -1,6 +1,7 @@
 # CSSipher
 
-This is a PoC that generates a pure-CSS substitution cipher that can be used to bypass spam filters for red team/penetration testing engagements.
+This is a PoC that generates a pure-CSS substitution cipher that can be used to bypass spam filters for red team/penetration testing engagements. Scanners will see random ASCII characters but the CSS will render as a string that would otherwise trigger an alert or get quarantined, like "Click here to reset your password."
+
 
 ### Usage
 
