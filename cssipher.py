@@ -34,11 +34,10 @@ html_template = """
 </html>
 """
 
-input_string = str(sys.argv[1])
 output_string = ''
 css_output, letter_map = generate_css()
 
-for i in input_string:
+for i in sys.argv[1]:
     if i in letter_map.keys():
         output_string += '<p class="{}"><span>{}</span></p>'.format(letter_map[i], random.choice(string.ascii_letters))
     else:
