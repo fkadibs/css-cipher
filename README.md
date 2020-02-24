@@ -8,6 +8,9 @@ This is a PoC that generates a pure-CSS substitution cipher that can be used to 
 python generate.py "This is what I want to encode"
 ```
 
+This will generate an `output.html` that contains the CSS and HTML that you can copy into the phishing email that you are crafting.
+
+
 ### Compatibility
 
 This implementation relies on CSS pseudo-elements, which are not supported across all email clients. This hasn't been tested very broadly, but based on my research it should work with the following email clients:
