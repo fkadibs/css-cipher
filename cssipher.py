@@ -11,14 +11,14 @@ def generate_class():
 def generate_css():
     css_output = ''
     name_map = {}
-    for letter in string.ascii_letters:
+    for letter in ascii_letters:
         if letter in input_string:
             css_class = generate_class()
-            css_output += span_template.format(name=css_class, letter=letter)
+            css_output += css_template.format(name=css_class, letter=letter)
             name_map[letter] = css_class
     return css_output, name_map
 
-span_template = '.{name} span {{ display: none;}} .{name}:after {{ content: "{letter}";}} '
+css_template = '.{name} span {{ display: none;}} .{name}:after {{ content: "{letter}";}} '
 
 html_template = """
 <!DOCTYPE html>
