@@ -19,9 +19,10 @@ html_template = """
   </body>
 </html>
 """
-   
- 
-def generate_css():
+
+
+def generate_html():
+    # build the css
     css_output = ''
     name_map = {}
     
@@ -30,14 +31,9 @@ def generate_css():
             css_class = ''.join(choice(ascii_letters) for x in range(3))
             css_output += css_template.format(name=css_class, letter=letter)
             name_map[letter] = css_class
-            
-    return css_output, name_map
-
-
-def generate_html():
+    
+    # build the html
     output_string = ''
-    css_output, letter_map = generate_css()
-
     for letter in sys.argv[1]:
         if letter in letter_map.keys():
             output_string += '<p class="{}"><span>{}</span></p>'.format(letter_map[letter], choice(ascii_letters))
