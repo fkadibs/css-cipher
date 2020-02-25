@@ -24,9 +24,8 @@ html_template = """
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
-      <style type="text/css"> p {{ display: inline;}} {css}
-      </style>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+    <style type="text/css"> p {{ display: inline;}} {css} </style>
   </head>
   <body>
     {body}
