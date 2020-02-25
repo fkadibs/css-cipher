@@ -1,12 +1,12 @@
 import sys
-import string
-import random
+from random import choice
+from string import ascii_letters
 
 if len(sys.argv) != 2:
     exit('Usage: cssipher.py <input>')
 
 def generate_class():
-    return ''.join(random.choice(string.ascii_letters) for x in range(3))
+    return ''.join(choice(ascii_letters) for x in range(3))
 
 def generate_css():
     css_output = ''
@@ -39,7 +39,7 @@ css_output, letter_map = generate_css()
 
 for i in sys.argv[1]:
     if i in letter_map.keys():
-        output_string += '<p class="{}"><span>{}</span></p>'.format(letter_map[i], random.choice(string.ascii_letters))
+        output_string += '<p class="{}"><span>{}</span></p>'.format(letter_map[i], choice(ascii_letters))
     else:
         output_string += i
 
