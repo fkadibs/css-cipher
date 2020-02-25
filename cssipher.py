@@ -44,5 +44,4 @@ def generate_html():
 
 
 with open('output.html', 'w') as f:
-    html = generate_html()
-    f.write(html)
+    f.write(generate_html())
