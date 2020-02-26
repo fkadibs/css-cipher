@@ -6,7 +6,7 @@ This is a PoC that generates a pure-CSS substitution cipher that can be used to 
 ### Usage
 
 ```console
-python generate.py "This is what I want to encode"
+python css-cipher.py "This is what I want to encode"
 ```
 
 This will generate an `output.html` that contains the CSS and HTML that you can copy into the phishing email that you are crafting.
